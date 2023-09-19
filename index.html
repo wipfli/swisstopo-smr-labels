@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Swisstopo SMR Labels</title>
+    <meta property="og:description" content="Swisstopo SMR Labels" />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.js'></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        const map = new maplibregl.Map({
+            container: 'map',
+            style:
+                'style.json',
+            center: [8.02353, 47.44167],
+            zoom: 12,
+            hash: 'map',
+            minZoom: 11,
+            maxZoom: 15
+        });
+
+        map.on('load', () => {
+            map.addSource('maine', {
+                'type': 'geojson',
+                'data': {
+                    "type": "FeatureCollection",
+                    "name": "Drawing",
+                    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                    "features": [
+                        { "type": "Feature", "properties": { "Name": "Küttigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.023575464412859, 47.420416581119198] } },
+                        { "type": "Feature", "properties": { "Name": "Asp", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.042381091787609, 47.445175339454799] } },
+                        { "type": "Feature", "properties": { "Name": "Rombach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.034425349394169, 47.406639031715301] } },
+                        { "type": "Feature", "properties": { "Name": "Erlinsbach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.00723090969063, 47.414303221651899] } },
+                        { "type": "Feature", "properties": { "Name": "Kienberg", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.98266368153486, 47.441067850639598] } },
+                        { "type": "Feature", "properties": { "Name": "Benken", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.01661106459243, 47.440752782871201] } },
+                        { "type": "Feature", "properties": { "Name": "Oberhof", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.99382717381806, 47.447638809230902] } },
+                        { "type": "Feature", "properties": { "Name": "Wölflinswil", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.01458584417807, 47.458677683127398] } },
+                        { "type": "Feature", "properties": { "Name": "Herznach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.038000285437279, 47.468193677581802] } },
+                        { "type": "Feature", "properties": { "Name": "Densbüren", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.06820438908364, 47.450269105818698] } },
+                        { "type": "Feature", "properties": { "Name": "Oberzeihen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.07282754154418, 47.465750007108198] } },
+                        { "type": "Feature", "properties": { "Name": "Zeihen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.09377242604886, 47.471956272957101] } },
+                        { "type": "Feature", "properties": { "Name": "Oberfrick", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.019190396065159, 47.494182910758298] } },
+                        { "type": "Feature", "properties": { "Name": "Gipf", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.99194738604275, 47.501692755129298] } },
+                        { "type": "Feature", "properties": { "Name": "Hornussen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.05429770455075, 47.495206019512601] } },
+                        { "type": "Feature", "properties": { "Name": "Uecken", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.053549608562671, 47.488134469378998] } },
+                        { "type": "Feature", "properties": { "Name": "Wittnach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.97023711656729, 47.485535857765399] } },
+                        { "type": "Feature", "properties": { "Name": "Anwil", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.9457412128666, 47.455236038092103] } },
+                        { "type": "Feature", "properties": { "Name": "Rothenfluh", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.93247864792694, 47.461164532302497] } },
+                        { "type": "Feature", "properties": { "Name": "Oltigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.94686180477468, 47.433101163108603] } },
+                        { "type": "Feature", "properties": { "Name": "Wenslingen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.92033820345677, 47.444204272219899] } },
+                        { "type": "Feature", "properties": { "Name": "Tecknau", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.89355201903737, 47.451839753573601] } },
+                        { "type": "Feature", "properties": { "Name": "Rünenberg", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.89983052058362, 47.433599162553797] } },
+                        { "type": "Feature", "properties": { "Name": "Kilchberg BL", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.90932795789336, 47.4287435285611] } },
+                        { "type": "Feature", "properties": { "Name": "Zegligen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.91538463952952, 47.411406097670202] } },
+                        { "type": "Feature", "properties": { "Name": "Diepflingen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.85622417194733, 47.446560796186297] } },
+                        { "type": "Feature", "properties": { "Name": null, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.8509920354105, 47.430019789819099] } },
+                        { "type": "Feature", "properties": { "Name": "Rümlingen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.8642703301495, 47.425907062176101] } },
+                        { "type": "Feature", "properties": { "Name": "Häfelfingen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.87375121411933, 47.418796244444302] } },
+                        { "type": "Feature", "properties": { "Name": "Bad Ramsach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.87854758147826, 47.4086916259769] } },
+                        { "type": "Feature", "properties": { "Name": "Buckten", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.85815068492923, 47.409369529123197] } },
+                        { "type": "Feature", "properties": { "Name": "Erlinsbach SO", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.98781060969421, 47.402202788520398] } },
+                        { "type": "Feature", "properties": { "Name": "Rohr b. O.", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.94571514038408, 47.405857520825599] } },
+                        { "type": "Feature", "properties": { "Name": "Bad Lostorf", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.94473815514096, 47.396377400402798] } },
+                        { "type": "Feature", "properties": { "Name": "Lostorf", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.92868691908253, 47.386811549166701] } },
+                        { "type": "Feature", "properties": { "Name": "Stüsslingen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.98167065298256, 47.387177097752101] } },
+                        { "type": "Feature", "properties": { "Name": "Niedergösgen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.97738754845213, 47.380121410762001] } },
+                        { "type": "Feature", "properties": { "Name": "Mahren", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.92061042804973, 47.376156674587499] } },
+                        { "type": "Feature", "properties": { "Name": "Biberstein", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.078275132555159, 47.420255194267703] } },
+                        { "type": "Feature", "properties": { "Name": "Thalheim AG", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.09029565475873, 47.441866820026299] } },
+                        { "type": "Feature", "properties": { "Name": "Schinznach Dorf", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.122788261206461, 47.449206613166901] } },
+                        { "type": "Feature", "properties": { "Name": "Linn", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.12101086740871, 47.466379328513803] } },
+                        { "type": "Feature", "properties": { "Name": "Gallenkirch", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.137104883279729, 47.474713896778198] } },
+                        { "type": "Feature", "properties": { "Name": "Bözen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.088339881306689, 47.4998374969677] } },
+                        { "type": "Feature", "properties": { "Name": "Effigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.111574282416299, 47.492629316281104] } },
+                        { "type": "Feature", "properties": { "Name": "Oberflachs", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.12418861350055, 47.437305147037399] } },
+                        { "type": "Feature", "properties": { "Name": "Veltheim AG", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.1361045741595, 47.432265877101898] } },
+                        { "type": "Feature", "properties": { "Name": "Auenstein", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.13397038376635, 47.421740395722203] } },
+                        { "type": "Feature", "properties": { "Name": "Aarau", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.02559496428387, 47.3901239853557] } },
+                        { "type": "Feature", "properties": { "Name": "Aarau Rohr", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.09552457765596, 47.3980280121731] } },
+                        { "type": "Feature", "properties": { "Name": "Rupperswil", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.14721622586671, 47.400282123575998] } },
+                        { "type": "Feature", "properties": { "Name": "Wildegg", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.16174823198047, 47.409074548799097] } },
+                        { "type": "Feature", "properties": { "Name": "Buchs AG", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.088482808343811, 47.384217339575301] } },
+                        { "type": "Feature", "properties": { "Name": "Wöschnau", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.02504070161601, 47.380040093772202] } },
+                        { "type": "Feature", "properties": { "Name": "Suhr", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.06555011036458, 47.375612151576298] } },
+                        { "type": "Feature", "properties": { "Name": "Hunzenschwil", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.120065214641841, 47.375153061737102] } },
+                        { "type": "Feature", "properties": { "Name": "Schafisheim", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.14835132270753, 47.3689608078083] } },
+                        { "type": "Feature", "properties": { "Name": "Staufen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.1558185147779, 47.383728853384397] } },
+                        { "type": "Feature", "properties": { "Name": "Schupfart", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.97513128448308, 47.508395634103003] } },
+                        { "type": "Feature", "properties": { "Name": "Hellikon", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.93430073696499, 47.513846324571702] } },
+                        { "type": "Feature", "properties": { "Name": "Wegenstetten", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.91217752907582, 47.499787990887398] } },
+                        { "type": "Feature", "properties": { "Name": "Hemmiken", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.88745945171448, 47.4926603711233] } },
+                        { "type": "Feature", "properties": { "Name": "Ormalingen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.8799926787899, 47.476129509622702] } },
+                        { "type": "Feature", "properties": { "Name": "Gelterkinden", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.87964476527455, 47.460926093709197] } },
+                        { "type": "Feature", "properties": { "Name": "Frick", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.03779503046699, 47.509142425321699] } },
+                        { "type": "Feature", "properties": { "Name": "Elfigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.08379738389957, 47.5099492502369] } },
+                        { "type": "Feature", "properties": { "Name": "Oberbözberg", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.15302454625083, 47.502768648443499] } },
+                        { "type": "Feature", "properties": { "Name": "Kästhal", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.13265014040911, 47.5077098890131] } },
+                        { "type": "Feature", "properties": { "Name": "Rickenbach BL", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.86669420861119, 47.484669918471297] } },
+                        { "type": "Feature", "properties": { "Name": "Buus", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.86291871716227, 47.512533751546499] } }
+                    ]
+                }
+
+            });
+
+            map.addSource('maine-1', {
+                'type': 'geojson',
+                'data': {
+                    "type": "FeatureCollection",
+                    "name": "Drawing",
+                    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                    "features": [
+                        { "type": "Feature", "properties": { "Name": "Oberhof", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.01033448615693, 47.4543290312659] } },
+                        { "type": "Feature", "properties": { "Name": "Wölflinswil", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.006776615214971, 47.464287368783403] } },
+                        { "type": "Feature", "properties": { "Name": "Wittnau", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.98382085468225, 47.478768597253797] } },
+                        { "type": "Feature", "properties": { "Name": "Wegenstetten", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.94701009464037, 47.496116062110197] } },
+                        { "type": "Feature", "properties": { "Name": "Gipf", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.99505361249947, 47.501297892852698] } },
+                        { "type": "Feature", "properties": { "Name": "-Oberfrick", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.01535896896395, 47.4916901162511] } },
+                        { "type": "Feature", "properties": { "Name": "Herznach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.06073709523691, 47.473194520946201] } },
+                        { "type": "Feature", "properties": { "Name": "Anwil", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.9504197680135, 47.452772458288898] } },
+                        { "type": "Feature", "properties": { "Name": "Rothenfluh", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.91620201076698, 47.456376275394398] } },
+                        { "type": "Feature", "properties": { "Name": "Wenslingen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.92036751211616, 47.441339794446399] } },
+                        { "type": "Feature", "properties": { "Name": "Oltigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.94211493716784, 47.433683587608598] } },
+                        { "type": "Feature", "properties": { "Name": "Küttigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.04119167347184, 47.421864539092198] } },
+                        { "type": "Feature", "properties": { "Name": "Asp", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.04623505668607, 47.4452858274609] } },
+                        { "type": "Feature", "properties": { "Name": "Densbüren", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.06271349205392, 47.4514652514708] } },
+                        { "type": "Feature", "properties": { "Name": "Zeihen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.07527461396195, 47.476140986622497] } },
+                        { "type": "Feature", "properties": { "Name": "Oberzeihen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.09296266884318, 47.462967985300502] } },
+                        { "type": "Feature", "properties": { "Name": "Ueken", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.04896253343103, 47.4887086220782] } },
+                        { "type": "Feature", "properties": { "Name": "Hornussen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.07271235696469, 47.501871433466398] } },
+                        { "type": "Feature", "properties": { "Name": "Bözen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.088470640330931, 47.499623087809901] } },
+                        { "type": "Feature", "properties": { "Name": "Effigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.107837343648869, 47.492813604779997] } },
+                        { "type": "Feature", "properties": { "Name": "Biberstein", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.09654303657341, 47.417456930516401] } },
+                        { "type": "Feature", "properties": { "Name": "Rombach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.041025575856249, 47.407170012047203] } },
+                        { "type": "Feature", "properties": { "Name": "Thalheim", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.11174498758197, 47.436235821828397] } },
+                        { "type": "Feature", "properties": { "Name": "Veltheim", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.149701161258131, 47.440222929309201] } },
+                        { "type": "Feature", "properties": { "Name": "Erlinsbach AG", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.02250117705186, 47.401602943656599] } },
+                        { "type": "Feature", "properties": { "Name": "Erlinsbach SO", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.99368741864311, 47.400880366789501] } },
+                        { "type": "Feature", "properties": { "Name": "Aarau Rohr", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.096660754268241, 47.401204767734797] } },
+                        { "type": "Feature", "properties": { "Name": "Schinznach Dorf", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.15161206900679, 47.452097168385997] } },
+                        { "type": "Feature", "properties": { "Name": "Gallenkirch", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.12690777598727, 47.475802394953199] } },
+                        { "type": "Feature", "properties": { "Name": "Kienberg", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.9773848622059, 47.441261397107297] } },
+                        { "type": "Feature", "properties": { "Name": "Linn", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.129676701388631, 47.468114116857997] } },
+                        { "type": "Feature", "properties": { "Name": "Oberflachs", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.127149701278331, 47.445221755370198] } },
+                        { "type": "Feature", "properties": { "Name": "Stüsslingen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.98359201206214, 47.394120944685703] } },
+                        { "type": "Feature", "properties": { "Name": "Rünenberg", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.89448806740539, 47.432216904787097] } },
+                        { "type": "Feature", "properties": { "Name": "Gelterkinden", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.85608204895361, 47.4569758996413] } },
+                        { "type": "Feature", "properties": { "Name": "Kilchberg BL", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.89146892929217, 47.421726044384798] } },
+                        { "type": "Feature", "properties": { "Name": "Zegligen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.91230540183871, 47.419481598682999] } },
+                        { "type": "Feature", "properties": { "Name": "Rohr b. Olten", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.9624999241573, 47.4079196504278] } }
+                    ]
+                }
+
+
+            });
+
+            map.addSource('maine-2', {
+                'type': 'geojson',
+                'data': {
+                    "type": "FeatureCollection",
+                    "name": "Drawing",
+                    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                    "features": [
+                        { "type": "Feature", "properties": { "Name": "Oberhof", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.001607265791931, 47.449043832570098] } },
+                        { "type": "Feature", "properties": { "Name": "Wölflinswil", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.00512837779821, 47.4587512531972] } },
+                        { "type": "Feature", "properties": { "Name": "Kienberg", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.96163276361528, 47.438927101664099] } },
+                        { "type": "Feature", "properties": { "Name": "Anwil", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.94407256634623, 47.448987280133402] } },
+                        { "type": "Feature", "properties": { "Name": "Wittnau", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.98216798473123, 47.479276369135199] } },
+                        { "type": "Feature", "properties": { "Name": "Asp", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.047322909319799, 47.445012788281801] } },
+                        { "type": "Feature", "properties": { "Name": "Densbüren", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.04639772313252, 47.455450713798797] } },
+                        { "type": "Feature", "properties": { "Name": "Herznach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.05830026378891, 47.474643633359698] } },
+                        { "type": "Feature", "properties": { "Name": "Gipf-", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.9956427380845, 47.499678836121298] } },
+                        { "type": "Feature", "properties": { "Name": "-Oberfrick", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.010297155973889, 47.492652226388799] } },
+                        { "type": "Feature", "properties": { "Name": "Frick", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.03307228646246, 47.507027723900997] } },
+                        { "type": "Feature", "properties": { "Name": "Zeihen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.077472283706751, 47.476523021171502] } },
+                        { "type": "Feature", "properties": { "Name": "Bözen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.08901116523352, 47.495753375650402] } },
+                        { "type": "Feature", "properties": { "Name": "Ueken", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.04786184452068, 47.487154164505696] } },
+                        { "type": "Feature", "properties": { "Name": "Gallekirch", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.13042493936053, 47.479799525394498] } },
+                        { "type": "Feature", "properties": { "Name": "Effigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.105694088214539, 47.492438460963598] } },
+                        { "type": "Feature", "properties": { "Name": "Linn", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.12825197559474, 47.468993005864] } },
+                        { "type": "Feature", "properties": { "Name": "Oberbözberg", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.15433526729438, 47.4945953844908] } },
+                        { "type": "Feature", "properties": { "Name": "Villnach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.157607202422779, 47.476542662383999] } },
+                        { "type": "Feature", "properties": { "Name": "Oberzeihen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.09133480841947, 47.465175461020898] } },
+                        { "type": "Feature", "properties": { "Name": "Schinznach Dorf", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.130433915549469, 47.448332701950797] } },
+                        { "type": "Feature", "properties": { "Name": "Veltheim AG", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.152826914749159, 47.440275173303498] } },
+                        { "type": "Feature", "properties": { "Name": "Thalheim AG", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.092999804297889, 47.438374871541598] } },
+                        { "type": "Feature", "properties": { "Name": "Oberflachs", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.124339492549559, 47.439545857328298] } },
+                        { "type": "Feature", "properties": { "Name": "Auenstein", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.13969293762865, 47.421820405287797] } },
+                        { "type": "Feature", "properties": { "Name": "Biberstein", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.07908850913851, 47.416633193204802] } },
+                        { "type": "Feature", "properties": { "Name": "Küttigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.055089610767441, 47.417214386751397] } },
+                        { "type": "Feature", "properties": { "Name": "Rombach", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.03854360211413, 47.405580136387201] } },
+                        { "type": "Feature", "properties": { "Name": "Erlinsbach AG", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.01992464621539, 47.403227912385503] } },
+                        { "type": "Feature", "properties": { "Name": "Erlinsbach SO", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.99419771854969, 47.4013063456187] } },
+                        { "type": "Feature", "properties": { "Name": "Aarau", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.03247099189471, 47.388428849717201] } },
+                        { "type": "Feature", "properties": { "Name": "Aarau Rohr", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.076189292601059, 47.404296781237299] } },
+                        { "type": "Feature", "properties": { "Name": "Rohr b. Olten", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.96007287764342, 47.409502578080897] } },
+                        { "type": "Feature", "properties": { "Name": "Zegligen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.89881659071085, 47.4151463698851] } },
+                        { "type": "Feature", "properties": { "Name": "Kilchberg BL", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.89298911885065, 47.4238378233931] } },
+                        { "type": "Feature", "properties": { "Name": "Oltigen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.93328121016504, 47.429919601350299] } },
+                        { "type": "Feature", "properties": { "Name": "Wensligen", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.91610292421758, 47.440489125239502] } },
+                        { "type": "Feature", "properties": { "Name": "Rothenfluh", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.92305778659599, 47.462073181718701] } },
+                        { "type": "Feature", "properties": { "Name": "Wegenstetten", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.92192887710574, 47.498837575994898] } },
+                        { "type": "Feature", "properties": { "Name": "Hellikon", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.92266373524653, 47.506498085677002] } },
+                        { "type": "Feature", "properties": { "Name": "Schupfart", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.9569399640573, 47.512725484558899] } },
+                        { "type": "Feature", "properties": { "Name": "Benken", "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.023802799991159, 47.441475332762003] } }
+                    ]
+                }
+            });
+
+            map.addSource('maine-3', {
+                'type': 'geojson',
+                'data': {
+                    "type": "FeatureCollection",
+                    "name": "Drawing",
+                    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                    "features": [
+                        { "type": "Feature", "properties": { "Name": "Oberhof", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.002107172378055, 47.452304643963195] } },
+                        { "type": "Feature", "properties": { "Name": "Wölflinswil", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.002464164360759, 47.463214127140233] } },
+                        { "type": "Feature", "properties": { "Name": "Kienberg", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.961632763615277, 47.438927101664063] } },
+                        { "type": "Feature", "properties": { "Name": "Anwil", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.944072566346231, 47.44898728013343] } },
+                        { "type": "Feature", "properties": { "Name": "Wittnau", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.979345069425027, 47.479601747125393] } },
+                        { "type": "Feature", "properties": { "Name": "Asp", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.050172562131465, 47.443050708823222] } },
+                        { "type": "Feature", "properties": { "Name": "Densbüren", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.05529811531243, 47.45534961724583] } },
+                        { "type": "Feature", "properties": { "Name": "Herznach", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.047608470369561, 47.471593374237102] } },
+                        { "type": "Feature", "properties": { "Name": "Gipf-", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.999331472997007, 47.501487784469958] } },
+                        { "type": "Feature", "properties": { "Name": "-Oberfrick", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.008363236039363, 47.493228156220034] } },
+                        { "type": "Feature", "properties": { "Name": "Frick", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.026621704810468, 47.501749658047217] } },
+                        { "type": "Feature", "properties": { "Name": "Zeihen", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.079096218057996, 47.476338036485394] } },
+                        { "type": "Feature", "properties": { "Name": "Bözen", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.087835783819653, 47.49590770779573] } },
+                        { "type": "Feature", "properties": { "Name": "Ueken", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.044043910406065, 47.48455358885343] } },
+                        { "type": "Feature", "properties": { "Name": "Gallekirch", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.128122627462938, 47.480132110191938] } },
+                        { "type": "Feature", "properties": { "Name": "Effigen", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.098923380295945, 47.489247690568334] } },
+                        { "type": "Feature", "properties": { "Name": "Linn", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.12762421305068, 47.46934788381968] } },
+                        { "type": "Feature", "properties": { "Name": "Oberbözberg", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.153930334118263, 47.49941035284791] } },
+                        { "type": "Feature", "properties": { "Name": "Villnach", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.155567108763881, 47.46975407447087] } },
+                        { "type": "Feature", "properties": { "Name": "Oberzeihen", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.089295821321558, 47.466154254686359] } },
+                        { "type": "Feature", "properties": { "Name": "Schinznach Dorf", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.135050246096725, 47.447148118721579] } },
+                        { "type": "Feature", "properties": { "Name": "Veltheim AG", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.156232709402108, 47.43766604000092] } },
+                        { "type": "Feature", "properties": { "Name": "Thalheim AG", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.105068284015896, 47.435460122974774] } },
+                        { "type": "Feature", "properties": { "Name": "Oberflachs", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.125195955299443, 47.440579732950241] } },
+                        { "type": "Feature", "properties": { "Name": "Auenstein", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.135224740843787, 47.420206003793631] } },
+                        { "type": "Feature", "properties": { "Name": "Biberstein", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.081173360182609, 47.415485100522488] } },
+                        { "type": "Feature", "properties": { "Name": "Küttigen", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.042942757000558, 47.412717547767663] } },
+                        { "type": "Feature", "properties": { "Name": "Rombach", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.042347929979318, 47.405398377043888] } },
+                        { "type": "Feature", "properties": { "Name": "Erlinsbach AG", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.017391147838262, 47.402696319816307] } },
+                        { "type": "Feature", "properties": { "Name": "Erlinsbach SO", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.999926042802585, 47.400891010735961] } },
+                        { "type": "Feature", "properties": { "Name": "Aarau", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.045253471884768, 47.395985812334793] } },
+                        { "type": "Feature", "properties": { "Name": "Aarau Rohr", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.080264675126362, 47.403794316526707] } },
+                        { "type": "Feature", "properties": { "Name": "Rohr b. Olten", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.952047920565394, 47.409056171069878] } },
+                        { "type": "Feature", "properties": { "Name": "Zegligen", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.901297433944047, 47.418275249543562] } },
+                        { "type": "Feature", "properties": { "Name": "Kilchberg BL", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.901261590172458, 47.426788950938231] } },
+                        { "type": "Feature", "properties": { "Name": "Oltigen", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.93328121016504, 47.429919601350306] } },
+                        { "type": "Feature", "properties": { "Name": "Wensligen", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.914287883157472, 47.440511708337183] } },
+                        { "type": "Feature", "properties": { "Name": "Rothenfluh", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.92179084818093, 47.461831391494329] } },
+                        { "type": "Feature", "properties": { "Name": "Wegenstetten", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.924866348143763, 47.498845661260809] } },
+                        { "type": "Feature", "properties": { "Name": "Hellikon", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.922265640297447, 47.506873482043176] } },
+                        { "type": "Feature", "properties": { "Name": "Schupfart", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [7.960429121653544, 47.514501546142171] } },
+                        { "type": "Feature", "properties": { "Name": "Benken", "description": "", "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "type": "marker" }, "geometry": { "type": "Point", "coordinates": [8.024260303240714, 47.441606097701168] } }
+                    ]
+                }
+            });
+            map.addLayer({
+                'id': 'maine',
+                'type': 'symbol',
+                'source': 'maine',
+                'maxzoom': 12,
+                'layout': {
+                    'text-field': ['get', 'Name'],
+                    'text-font': ['Fira Sans Regular'],
+                    'text-size': 18,
+                    'text-allow-overlap': true
+                },
+                'paint': {
+                    'text-halo-width': 2,
+                    'text-halo-color': 'rgba(255, 255, 255, 0.7)'
+
+                }
+            });
+            map.addLayer({
+                'id': 'maine-1',
+                'type': 'symbol',
+                'source': 'maine-1',
+                'minzoom': 12,
+                "maxzoom": 13,
+                'layout': {
+                    'text-field': ['get', 'Name'],
+                    'text-font': ['Fira Sans Regular'],
+                    'text-size': 18,
+                    'text-allow-overlap': true
+                },
+                'paint': {
+                    'text-halo-width': 2,
+                    'text-halo-color': 'rgba(255, 255, 255, 0.7)'
+
+                }
+            });
+            map.addLayer({
+                'id': 'maine-2',
+                'type': 'symbol',
+                'source': 'maine-2',
+                'minzoom': 13,
+                'maxzoom': 14,
+                'layout': {
+                    'text-field': ['get', 'Name'],
+                    'text-font': ['Fira Sans Regular'],
+                    'text-size': 18,
+                    'text-allow-overlap': true
+                },
+                'paint': {
+                    'text-halo-width': 2,
+                    'text-halo-color': 'rgba(255, 255, 255, 0.7)'
+
+                }
+            });
+            map.addLayer({
+                'id': 'maine-3',
+                'type': 'symbol',
+                'source': 'maine-3',
+                'minzoom': 14,
+                'layout': {
+                    'text-field': ['get', 'Name'],
+                    'text-font': ['Fira Sans Regular'],
+                    'text-size': 18,
+                    'text-allow-overlap': true
+                },
+                'paint': {
+                    'text-halo-width': 2,
+                    'text-halo-color': 'rgba(255, 255, 255, 0.7)'
+
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
